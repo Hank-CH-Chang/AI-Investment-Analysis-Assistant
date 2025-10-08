@@ -2,3 +2,4 @@ streamlit
 yfinance
 newspaper3k
 requests
+lxml_html_clean
