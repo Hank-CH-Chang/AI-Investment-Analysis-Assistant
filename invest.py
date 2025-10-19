@@ -95,8 +95,9 @@ st.markdown("""
 請輸入你有興趣的公司股票代碼（如 NVDA、AAPL、TSLA），系統會自動抓取股價與新聞，並用 Gemini AI 生成投資建議。
 """)
 
-ticker = st.text_input("股票代碼", "NVDA").strip().upper()
-run_btn = st.button("分析")
+with st.form(key='stock_form'):
+    ticker = st.text_input("股票代碼", "NVDA").strip().upper()
+    run_btn = st.form_submit_button("分析")
 
 if run_btn and ticker:
     with st.spinner("分析中，請稍候..."):
